@@ -1,4 +1,4 @@
-package main.java.controller;
+package controller;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,8 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import main.java.Main;
-import main.java.ui.ScreenManager;
+import base.Main;
+import ui.ScreenManager;
 
 public class EditScreenController implements ManagedScreen {
 

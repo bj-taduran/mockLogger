@@ -1,17 +1,17 @@
-package main.java;
+package base;
 
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import main.java.ui.ScreenManager;
+import ui.ScreenManager;
 
 public class Main extends Application {
 
     public static String defaultPage = "default";
-    public static String defaultPagePath = "../../resources/default.fxml";
+    public static String defaultPagePath = "/default.fxml";
     public static String editPage = "edit";
-    public static String editPagePath = "../../resources/edit.fxml";
+    public static String editPagePath = "/edit.fxml";
 
     @Override
     public void start(Stage stage) throws Exception {

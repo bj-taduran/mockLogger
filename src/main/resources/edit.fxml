@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <VBox alignment="TOP_CENTER" prefHeight="450.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1"
-      xmlns="http://javafx.com/javafx/2.2" fx:controller="main.java.controller.EditScreenController">
+      xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.EditScreenController">
 
     <TextField promptText="MOCK LOG NAME">
         <VBox.margin>

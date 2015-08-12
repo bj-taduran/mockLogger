@@ -1,15 +1,11 @@
-package main.java.controller;
+package controller;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import main.java.Main;
-import main.java.ui.ScreenManager;
-
-import java.net.URL;
-import java.util.ResourceBundle;
+import base.Main;
+import ui.ScreenManager;
 
 public class DefaultScreenController implements ManagedScreen {
 

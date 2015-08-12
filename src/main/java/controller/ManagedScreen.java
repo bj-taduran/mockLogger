@@ -1,8 +1,8 @@
-package main.java.controller;
+package controller;
 
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
-import main.java.ui.ScreenManager;
+import ui.ScreenManager;
 
 /**
  * Created by bujo on 7/18/15.

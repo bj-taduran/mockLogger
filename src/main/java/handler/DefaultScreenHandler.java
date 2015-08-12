@@ -1,4 +1,4 @@
-package main.java.handler;
+package handler;
 
 public class DefaultScreenHandler {
 }

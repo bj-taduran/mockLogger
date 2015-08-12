@@ -1,4 +1,4 @@
-package main.java.ui;
+package ui;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -11,7 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
-import main.java.controller.ManagedScreen;
+import controller.ManagedScreen;
 
 import java.net.URL;
 import java.util.HashMap;
