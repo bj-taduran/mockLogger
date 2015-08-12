@@ -1,0 +1,14 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<GridPane fx:controller="main.java.controller.DefaultScreenController"
+          xmlns:fx="http://javafx.com/fxml" alignment="top_center" prefHeight="450" prefWidth="300">
+    <VBox>
+        <Label id="app_title" text="Mock Logs"/>
+        <HBox>
+            <Button text="+" onAction="#goToEditScreen"/>
+        </HBox>
+    </VBox>
+</GridPane>
