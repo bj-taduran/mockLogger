@@ -1,5 +1,7 @@
 package controller;
 
+import handler.EditHandler;
+import handler.Handler;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -13,9 +15,10 @@ import javafx.scene.layout.VBox;
 import base.Main;
 import ui.ScreenManager;
 
-public class EditScreenController implements ManagedScreen {
+public class EditScreenController extends ScreenController {
 
-    ScreenManager screenManager;
+    private ScreenManager screenManager;
+    private EditHandler handler;
 
     @Override
     public void setScreenManager(ScreenManager screenManager) {
@@ -35,37 +38,16 @@ public class EditScreenController implements ManagedScreen {
 
     @FXML
     private void addLogMessage(ActionEvent event) {
-        VBox node = (VBox) screenManager.getScreen(Main.editPage);
-        ObservableList<Node> list = node.getChildren();
-
-        GridPane gridPane = (GridPane) list.get(1);
-        ObservableList<Node> logMessages = gridPane.getChildren();
-
-        HBox hbox = new HBox();
-        TextField message = new TextField();
-        message.setPromptText("LOG MESSAGE");
-        TextField rateOfShowingUp = new TextField();
-        rateOfShowingUp.setPromptText("%");
-        Button button = new Button("-");
-        button.onActionProperty().setValue(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                deleteLogMessage(event);
-            }
-        });
-
-        hbox.getChildren().addAll(message, rateOfShowingUp, button);
-
-        gridPane.add(hbox, 0, logMessages.size());
+        handler.addLogMessage(getFxmlRootNodeChildren());
     }
 
     @FXML
     private void deleteLogMessage(ActionEvent event) {
-        ObservableList<Node> list = getFxmlRootNodeChildren();
+        handler.deleteLogMessage(getFxmlRootNodeChildren(), event);
+    }
 
-        GridPane gridPane = (GridPane) list.get(1);
-        ObservableList<Node> logMessages = gridPane.getChildren();
-
-        logMessages.remove(((Node) event.getSource()).getParent());
+    @Override
+    protected void setScreenHandler(Handler handler) {
+        this.handler = (EditHandler) handler;
     }
 }

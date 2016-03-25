@@ -1,4 +1,5 @@
 package handler;
 
-public class DefaultScreenHandler {
+public class DefaultScreenHandler implements DefaultHandler {
+
 }

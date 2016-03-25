@@ -1,5 +1,6 @@
 package ui;
 
+import controller.ScreenController;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -11,7 +12,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
-import controller.ManagedScreen;
 
 import java.net.URL;
 import java.util.HashMap;
@@ -33,8 +33,9 @@ public class ScreenManager extends StackPane {
             URL filePath = getClass().getResource(resource);
             FXMLLoader fxmlLoader = new FXMLLoader(filePath);
             Parent parentScreen = fxmlLoader.load();
-            ManagedScreen controller = fxmlLoader.getController();
+            ScreenController controller = fxmlLoader.getController();
             controller.setScreenManager(this);
+            controller.setScreenHandler(controller);
             addScreen(name, parentScreen);
             return true;
         } catch (Exception e) {
